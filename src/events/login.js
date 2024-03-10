@@ -11,15 +11,17 @@ async function login(page) {
 
 	console.log('Logging in...');
 
-	const searchResultSelector = '.submitButton';
-	await page.waitForSelector(searchResultSelector);
-	await page.click(searchResultSelector);
+	const submitBTN = '.submitButton';
+
+	await page.waitForSelector(submitBTN);
+	await page.click(submitBTN);
 
 	await waitForSpinner(page);
 
-	const twoStepSelector = '#twoStepAuthenticationStep1';
-	await page.waitForSelector(twoStepSelector);
-	await page.click(twoStepSelector);
+	const twoStepBTN = '#twoStepAuthenticationStep1';
+
+	await page.waitForSelector(twoStepBTN);
+	await page.click(twoStepBTN);
 
 	await waitForSpinner(page);
 }

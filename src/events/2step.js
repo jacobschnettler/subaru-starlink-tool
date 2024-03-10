@@ -3,13 +3,15 @@ const { fetchCode } = require('./fetchCode');
 async function twoStep(page) {
 	console.log('Fetching two-factor code...');
 
-	const twoFactorCode = await fetchCode();
+	setTimeout(async () => {
+		const twoFactorCode = await fetchCode();
 
-	await page.type('#verificationCode', twoFactorCode);
+		await page.type('#verificationCode', twoFactorCode);
 
-	await page.evaluate(() => {
-		document.querySelector('#rememberDevice').parentElement.click();
-	});
+		await page.evaluate(() => {
+			document.querySelector('#rememberDevice').parentElement.click();
+		});
+	}, 30000);
 }
 
 module.exports = {

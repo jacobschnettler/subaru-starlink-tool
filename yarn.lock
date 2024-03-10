@@ -693,6 +693,20 @@ ieee754@^1.1.13:
   resolved "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz"
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
 
+"imap-parser@>= 0.0.1":
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/imap-parser/-/imap-parser-0.0.3.tgz"
+  integrity sha512-QxciYDc7vKX7qufJ7EPcPA3CQ0Lg0ZyHUL+5aSeo5LHVsg8QfiCOdwlBHeJX8XwLxM0SD9+HMdpzuJNhgNo2uA==
+  dependencies:
+    readable-stream "~1.0.2"
+
+imap-server@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/imap-server/-/imap-server-0.0.1.tgz"
+  integrity sha512-OhlDJ2PLuI9DllHAZ6+Uzj2jth7PtcWenmzIPiSquvLTeC+zIEbW4UOGb6UZ/5bSU9NCtr15GB4PAJ7uK65VWw==
+  dependencies:
+    imap-parser ">= 0.0.1"
+
 imap@^0.8.19:
   version "0.8.19"
   resolved "https://registry.npmjs.org/imap/-/imap-0.8.19.tgz"
@@ -990,6 +1004,16 @@ queue-tick@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/queue-tick/-/queue-tick-1.0.1.tgz"
   integrity sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==
+
+readable-stream@~1.0.2:
+  version "1.0.34"
+  resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.34.tgz"
+  integrity sha512-ok1qVCJuRkNmvebYikljxJA/UEsKwLl2nI1OmaqAu4/UE+h0wKCHok4XkL/gvi39OacXvw59RJUOFUkDib2rHg==
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "0.0.1"
+    string_decoder "~0.10.x"
 
 readable-stream@1.1.x:
   version "1.1.14"

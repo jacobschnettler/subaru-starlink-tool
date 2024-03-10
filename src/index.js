@@ -4,18 +4,26 @@
 
 require('dotenv').config();
 
+const IMAP = require('./imap');
+
 const { openBrowser, createPage, login, twoStep } = require('./events');
 
 (async () => {
-	const browser = await openBrowser();
+	try {
+		const browser = await openBrowser();
 
-	const page = await createPage(browser);
+		const page = await createPage(browser);
 
-	await login(page);
+		await login(page);
 
-	await twoStep(page);
+		await twoStep(page);
 
-	// console.log('closed');
+		const vehicleData = await fetchData(page);
 
-	// process.exit();
+		process.exit();
+	} catch (err) {
+		console.log(err);
+
+		process.exit();
+	}
 })();

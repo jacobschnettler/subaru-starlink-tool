@@ -4,6 +4,7 @@ const openBrowserEvent = require('./openBrowser');
 const createPageEvent = require('./createPage');
 const waitForSpinnerEvent = require('./waitForSpinner');
 const fetchCodeEvent = require('./fetchCode');
+const fetchDataEvent = require('./fetchData');
 
 module.exports = {
 	...loginEvent,
@@ -12,4 +13,5 @@ module.exports = {
 	...createPageEvent,
 	...waitForSpinnerEvent,
 	...fetchCodeEvent,
+	...fetchDataEvent,
 };
