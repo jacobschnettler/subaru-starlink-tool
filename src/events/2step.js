@@ -1,7 +1,11 @@
+const { fetchCode } = require('./fetchCode');
+
 async function twoStep(page) {
 	console.log('Fetching two-factor code...');
 
-	await page.type('#verificationCode', '1a-32');
+	const twoFactorCode = await fetchCode();
+
+	await page.type('#verificationCode', twoFactorCode);
 
 	await page.evaluate(() => {
 		document.querySelector('#rememberDevice').parentElement.click();

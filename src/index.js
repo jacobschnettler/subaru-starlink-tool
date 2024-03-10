@@ -15,7 +15,7 @@ const { openBrowser, createPage, login, twoStep } = require('./events');
 
 	await twoStep(page);
 
-	console.log('closed');
+	// console.log('closed');
 
-	process.exit();
+	// process.exit();
 })();
