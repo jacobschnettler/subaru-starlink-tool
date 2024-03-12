@@ -32,6 +32,8 @@ async function transmitData() {
 
 		const vehicleData = await fetchData(page);
 
+		await browser.close();
+
 		const response = await axios.post(
 			process.env.API + '/subaru/update',
 			vehicleData

@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 function openBrowser() {
 	return puppeteer.launch({
-		// headless: false,
+		headless: false,
 		// headless: process.env.devmode == 'true',
 	});
 }
